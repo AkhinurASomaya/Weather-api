@@ -7,7 +7,7 @@ const getDayName = (dayType, dateVal = dateObj) => dateVal.
 toLocaleDateString('en-US', {weekday: dayType})
 
 function fetchWeatherData(location) {
-  const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${encodeURIComponent(location)}&days=5&aqi=no&alerts=no`;
+  const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${encodeURIComponent(location)}&days=5&aqi=no&alerts=no`;
   const currentDay = getDayName('long');
   const fullDateStr = dateObj.toLocaleDateString('en-US',{day: "numeric", month: "short", year: "numeric"});
   document.querySelector(".date-day").textContent = fullDateStr;
